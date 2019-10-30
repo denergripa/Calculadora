@@ -114,7 +114,7 @@ namespace Calculadora
             if (operador == "/" || operador == "*" || operador == "-")
             {
                 operador = "+";
-                txtHist.Text = " + " + valor1;
+                txtHist.Text = valor1 + "+";
             }
             else
             {
@@ -144,8 +144,9 @@ namespace Calculadora
         private void Igual_Click(object sender, EventArgs e)
         {
             //txtDisplay.Text = (txtHist.Text + operador + txtDisplay.Text); FAIL
-          
-            txtHist.Text = txtDisplay.Text + txtHist.Text;
+
+            //txtHist.Text = txtHist.Text + txtDisplay.Text;
+           
             valor2 = Convert.ToDouble(txtDisplay.Text); // Convert To double é pra transformar o caracter em um numero
 
             if (operador == "+")
